@@ -69,23 +69,23 @@ async def 암호화(interaction: discord.Interaction,내용:str):
 @client.tree.command(name="공지",description="공지 보내기")
 @app_commands.describe(내용="공지 내용")
 async def 공지(interaction: discord.Interaction,내용:str):
-     channel = client.get_channel(978322706929946665)  
+     channel = client.get_channel(채널 코드)  
      await channel.send("@everyone\n{}".format(내용))
      await interaction.response.send_message(f"\"{내용}\"을 정상적으로 보냈습니다",ephemeral=True)    
 
             
 @client.tree.command(name="서버장",description="서버장 정보")
 async def 서버장(interaction: discord.Interaction):
-        embed = discord.Embed(title="서버장 TMI", description="<@&978324282142781490>", color=0x62c1cc)
-        embed.add_field(name="> TMI", value="응애", inline=False)
+        embed = discord.Embed(title="제목", description="설명", color=0x62c1cc)
+        embed.add_field(name="이름", value=용내용", inline=False)
         embed.set_footer(text="명령어가 추가될수도 있습니다.")
         await interaction.response.send_message(embed=embed,ephemeral=True)
         
 @client.tree.command(name="투표",description="투표 보내기")
 @app_commands.describe(내용="투표 내용")
 async def 투표(interaction: discord.Interaction,내용:str):
-    channel = client.get_channel(978614702026412052)
-    channel2 = client.get_channel(1031133646180065341)
+    channel = client.get_channel(채널 코드)
+    channel2 = client.get_channel(채널 코드)
     button=Button(label="찬성",style=discord.ButtonStyle.blurple)
     button2=Button(label="반대",style=discord.ButtonStyle.red)
     
